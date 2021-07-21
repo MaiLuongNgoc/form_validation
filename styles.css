@@ -1,0 +1,79 @@
+body {
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.form {
+    background: white;
+    margin-top: 10vh;
+    /* height: 66vh; */
+    padding: 30px 25px;
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
+    
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.bio {
+    font-size: 22px;
+    height: 60px;
+    text-align: center;
+    color: grey;
+}
+
+.form-message {
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.invalid .form-message {
+    color: rgb(255, 58, 58);
+}
+
+.invalid .form-control {
+    border: 1px solid rgb(255, 58, 58);
+}
+
+.form-group {
+    margin-top: 25px;
+}
+
+.form-control {
+    width: 95%;
+    margin-top: 7px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+}
+
+.form-control {
+    outline: none;
+}
+
+.form-control:focus {
+    border: 1px solid #1dbfaf;
+}
+
+
+.form-submit {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #1dbfaf;
+    color: white;
+    padding: 10px 10px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 6px;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}
