@@ -58,8 +58,8 @@
                 <br />
                 <input
                     type="password"
-                    id="re-password"
-                    name="re-password"
+                    id="password-confirmation"
+                    name="password-confirmation"
                     placeholder="Nhập lại mật khẩu"
                     class="form-control"
                 />
@@ -77,9 +77,12 @@
                 form: '#form-1',
                 errorSelector: '.form-message',
                 rules: [
-                    Validator.isRequired('#fullname'),
-                    Validator.isEmail('#email'),
-                    Validator.minLength('#password', 6)
+                    Validator.isRequired('#fullname', 'Vui lòng điền tên đầy đủ của bạn'),
+                    Validator.isEmail('#email', 'Vui lòng nhập đúng định dạng email'),
+                    Validator.minLength('#password', 6, 'Password tối thiểu phải có 6 ký tự'),
+                    Validator.isConfirmed('#password-confirmation', function () {
+                        return document.querySelector('#form-1 #password').value;
+                    }, 'Nhập lại mật khẩu không chính xác')
                 ]
             });
 
